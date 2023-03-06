@@ -1,6 +1,8 @@
 import { Outlet } from "@remix-run/react"
+import ExpenseList from "~/components/expenses/ExpensesList"
 
 import expensesStyles from "~/styles/expenses.css"
+import { DUMMY_EXPENSES } from "~/mockup/mockup"
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: expensesStyles}]
@@ -8,9 +10,11 @@ export const links = () => {
 
 export default function Expenses() {
   return (
-    <div>
-      <h1>Expenses Page</h1>
+    <>
       <Outlet />
-    </div>
+      <main>
+        <ExpenseList expenses={DUMMY_EXPENSES} />
+      </main>
+    </>
   )
 }

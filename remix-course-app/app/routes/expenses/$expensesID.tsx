@@ -1,10 +1,12 @@
 import { useParams } from "@remix-run/react"
 
+import ExpenseForm from "~/components/expenses/ExpenseForm"
+
 const ExpensesDetail = () => {
   const params = useParams()
   return (
     <>
-      Hi {params.expensesID}
+      <ExpenseForm />
     </>
   )
 }
