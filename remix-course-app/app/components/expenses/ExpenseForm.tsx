@@ -1,11 +1,13 @@
+import { Link } from "@remix-run/react";
+
 const ExpenseForm = () => {
   const today = new Date().toISOString().slice(0, 10);
   
   return (
     <>
-      <form method="POST" className="form" id="expense-form">
+      <form method="POST" className="form">
         <p>
-          <label htmlFor="title">Expense Title</label>
+          <label htmlFor="title">Expense Title </label>
           <input type="text" id="title" name="title" required maxLength={30} />
         </p>
 
@@ -28,7 +30,7 @@ const ExpenseForm = () => {
         </div>
         <div className="form-actions">
           <button>Save Expense</button>
-          <a href="#">Cancel</a>
+          <Link to="..">Cancel</Link>
         </div>
       </form>
     </>

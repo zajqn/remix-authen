@@ -4,7 +4,7 @@ type Props = {}
 
 const IndexExpenses = (props: Props) => {
   return (
-    <div>Index</div>
+    <div></div>
   )
 }
 
